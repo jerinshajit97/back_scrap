@@ -1,6 +1,6 @@
 # back_scrap
 
-tool to scrap waybackmachine and find usefull information
+tool to scrap wayback machine and find usefull information
 
 ### usage:<br>
 ./backScrap.sh [your_domain_name]
