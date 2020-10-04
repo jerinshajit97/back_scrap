@@ -12,8 +12,8 @@ echo "$1" | waybackurls | sort -u > wayback/wayback.txt
 for list in $(gf --list)
 	do 
 		echo "[+] finding $list"
-
-		if [ $( cat wayback/wayback.txt | gf $list | sort -u | wc -c ) -gt 1 ]
+		
+		if  [ $list != "urls" ] && [ $list != "strings" ] && [ $( cat wayback/wayback.txt | gf $list | sort -u | wc -c ) -gt 1 ] 
 		then
 			cat wayback/wayback.txt | gf $list | sort -u > wayback/$list.txt
 		fi
